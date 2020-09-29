@@ -33,3 +33,7 @@ addEventListener(
     }
 )
 ```
+
+
+
+这次kintohub上ss和v2ray起死回生要特别感谢 Alice（ https://twitter.com/alicesu55 ）的condom项目（ https://github.com/alicesu55/condom ）。
