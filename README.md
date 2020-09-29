@@ -12,12 +12,12 @@ v2ray-plugin 插件下载页：https://github.com/shadowsocks/v2ray-plugin/relea
 
 然后，下载ss客户端，比如[Windows客户端](https://github.com/shadowsocks/shadowsocks-windows/releases/)，这个不多讲。配置如下：
 
-* 服务器地址: ***.***.kinto.io  //此处填写服务端生成的域名
+* 服务器地址: xxx.xxx.kinto.io  //此处填写服务端生成的域名
 * 端口: 443
 * 密码：password
 * 加密：chacha20-ietf-poly1305
 * 插件程序：D:\APP\v2ray-plugin_windows_amd64.exe  //此处要填插件在电脑上的绝对路径
-* 插件选项: path=/posts.html;host=***.***.kinto.io;tls //此处填上域名和路径
+* 插件选项: path=/posts.html;host=xxx.xxx.kinto.io;tls //此处填上域名和路径
 
 ### Workers反代
 
@@ -25,7 +25,7 @@ v2ray-plugin 插件下载页：https://github.com/shadowsocks/v2ray-plugin/relea
 addEventListener(
     "fetch",event => {
         let url=new URL(event.request.url);
-        url.hostname="***.***.kinto.io";
+        url.hostname="xxx.xxx.kinto.io";
         let request=new Request(url,event.request);
         event. respondWith(
             fetch(request)
