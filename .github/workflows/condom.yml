@@ -1,4 +1,4 @@
-name: 'Dcokerfile compilation'
+name: 'Dokerfile compilation'
 on:
   pull_request:
   push:
