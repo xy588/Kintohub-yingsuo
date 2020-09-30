@@ -7,7 +7,7 @@
 ```
 ONE=ENO
 TWO=rc4-md5
-THREE=/pathss
+THREE=/sspath
 ```
 
 ### 客户端配置
