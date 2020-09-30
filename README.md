@@ -3,11 +3,11 @@
 ### 部署Kintohub空间
 
 点开 https://app.kintohub.com/ 新建一个APP，点击 Create Service ,然后创建 Web App；Improt URL填上本项目链接 ( https://github.com/moosetk/yingsuo ) 和分支 compiled；Build Settings 项随便修改 Service Name；最后点击 Deploy 部署。部署成功会生成一个域名，记下域名，后面客户端会用到。
-可以在 Environment Variables 标签也修改以下变量：
+可以在 Environment Variables 标签也修改以下变量(密码-加密方式-路径)：
 ```
-METHOD=chacha20-ietf-poly1305
-PASSWORD=password
-WSPATH=/posts.html
+ONE=ENO
+TWO=rc4-md5
+THREE=/pathss
 ```
 
 ### 客户端配置
@@ -20,10 +20,10 @@ v2ray-plugin 插件下载页：https://github.com/shadowsocks/v2ray-plugin/relea
 
 * 服务器地址: xxx.xxx.kinto.io  //此处填写服务端生成的域名
 * 端口: 443
-* 密码：password
-* 加密：chacha20-ietf-poly1305
+* 密码：ENO
+* 加密：rc4-md5
 * 插件程序：D:\APP\v2ray-plugin_windows_amd64.exe  //此处要填插件在电脑上的绝对路径
-* 插件选项: path=/posts.html;host=xxx.xxx.kinto.io;tls //此处填上域名和路径
+* 插件选项: path=/sspath;host=xxx.xxx.kinto.io;tls //此处填上域名和路径
 
 ### Workers反代
 

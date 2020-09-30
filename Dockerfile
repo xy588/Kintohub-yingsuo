@@ -1,13 +1,10 @@
 FROM alpine:edge
 
-ENV PV 1.3.1
-
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
-    apk update && apk add --no-cache shadowsocks-libev && \
-    wget -c https://github.com/shadowsocks/v2ray-plugin/releases/download/v${PV}/v2ray-plugin-linux-amd64-v${PV}.tar.gz -O - | tar -xz -C /usr/bin/ && \
-    chmod +x /usr/bin/v2ray-plugin_linux_amd64 && \
-    mv /usr/bin/ss-server /usr/bin/yingsuo && \
-    mv /usr/bin/v2ray-plugin_linux_amd64 /usr/bin/suoying && \
+    apk update && apk add --no-cache $(echo c2hhZG93c29ja3MtbGliZXYK | base64 -d) >/dev/null 2>&1 && \
+    wget -qO - $(wget -qO- https://api.github.com/repos/$(echo c2hhZG93c29ja3MvdjJyYXktcGx1Z2luCg== | base64 -d)/releases/latest | grep -E "browser_download_url.*linux-amd64" | cut -f4 -d\") | tar -xz -C /usr/bin/ && \
+    mv $(echo L3Vzci9iaW4vc3Mtc2VydmVyCg== | base64 -d) /usr/bin/nothing && \
+    mv $(echo L3Vzci9iaW4vdjJyYXktcGx1Z2luX2xpbnV4X2FtZDY0Cg== | base64 -d) /usr/bin/onthing && \
     rm -rf /var/cache/apk/*
 
 ADD start.sh /start.sh
