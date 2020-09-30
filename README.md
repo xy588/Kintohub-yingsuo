@@ -4,9 +4,11 @@
 
 点开 https://app.kintohub.com/ 新建一个APP，点击 Create Service ,然后创建 Web App；Improt URL填上本项目链接 ( https://github.com/moosetk/yingsuo ) 和分支 compiled；Build Settings 项随便修改 Service Name；最后点击 Deploy 部署。部署成功会生成一个域名，记下域名，后面客户端会用到。
 可以在 Environment Variables 标签也修改以下变量：
+···
 METHOD=chacha20-ietf-poly1305
 PASSWORD=password
 WSPATH=/posts.html
+···
 
 ### 客户端配置
 
